@@ -284,16 +284,16 @@ public class Launcher {
 					return;
 				}
 
-				//history(profile); Some statistics, nevermind
+				history(profile); Some statistics, nevermind
 
-				/*
+				
 				if ((version.id.contains("1.8") && version.id.length() == 3) || version.id.contains("1.8.1")) {
 					JOptionPane.showMessageDialog(GUI.frame, Lang.getText("18181error"));
 					Console.appendln("There is an error with version 1.8 and 1.8.1, please optate for other 1.8.X, for example 1.8.2 or 1.8.3");
 					GUI.enableButtons();
 					return;
 				}
-				*/
+				
 
 				Settings.save();
 				Mods mods = null;
@@ -305,7 +305,7 @@ public class Launcher {
 					long end = System.currentTimeMillis();
 					long delta = end - start;
 					if (delta > 0) Console.appendln("Loaded " + (mods.getModList() == null ? 0 : mods.getModList().length) + " mods for " + version.id + " in " + delta + "ms");
-					/*
+					
 										if (mods.getModList() != null) {
 											for (Mod m : mods.getModList()) {
 												if (profile.mods.contains((Integer) m.id) && m.name.equals("Forge")) {
@@ -314,7 +314,7 @@ public class Launcher {
 												}
 											}
 										}
-										*/
+										
 				}
 				if (mods != null && mods.getModList() != null && mods.getModList().length != 0 && profile.mods != null && profile.mods.size() != 0) {
 					Console.appendln("Version with mods! (" + profile.mods.size() + ")");

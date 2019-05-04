@@ -424,7 +424,7 @@ public class Version {
 		finalArguments = finalArguments.replaceAll("\\$\\{user_properties\\}", userPropeties); // {'twitch_access_token':'xxxxxxxxx\}
 		finalArguments = finalArguments.replaceAll("\\$\\{user_type\\}", userType);
 		finalArguments = finalArguments.replaceAll("\\$\\{auth_session\\}", aToken);
-		//finalArguments = finalArguments.replaceAll("", "");
+		finalArguments = finalArguments.replaceAll("", "");
 		if (profile.resolutionX > 0 || profile.resolutionY > 0) {
 			finalArguments += " --width " + profile.resolutionX;
 			finalArguments += " --height " + profile.resolutionY;

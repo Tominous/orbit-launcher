@@ -189,7 +189,7 @@ public class GUI {
 		adv = new JPanel();
 		adv.setLayout(new FlowLayout());
 
-		/*
+		
 		JButton reportBug = new JButton("Report buugg1-4564");
 		reportBug.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -201,7 +201,7 @@ public class GUI {
 			}
 		});
 		adv.add(reportBug); // https://mojang.atlassian.net/browse/MC
-		*/
+		
 
 		w2 = new WebDisplay(new HyperlinkListener() {
 			@Override
@@ -216,27 +216,27 @@ public class GUI {
 		lch.add(w2.getComponent());
 		lch.setBorder(null);
 
-		/*
+		
 		JPanel pContact = new JPanel();
 		pContact.setBorder(BorderFactory.createTitledBorder(Launcher.getLang().getText("Contacto 468416846")));
 
 		JButton btn1 = new JButton(Launcher.getLang().getText("Envianos un mensaje -86464"));
 		btn1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				JOptionPane.showMessageDialog(null, "Aún no implementado.\nNot yet implemented.");
+				JOptionPane.showMessageDialog(null, "AÃºn no implementado.\nNot yet implemented.");
 			}
 		});
 		JButton btn2 = new JButton(Launcher.getLang().getText("repotar un bug del launcher 4684987"));
 		btn2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				JOptionPane.showMessageDialog(null, "Aún no implementado.\nNot yet implemented.");
+				JOptionPane.showMessageDialog(null, "AÃºn no implementado.\nNot yet implemented.");
 			}
 		});
 
 		pContact.add(btn1);
 		pContact.add(btn2);
 		hlp.add(pContact);
-		*/
+		
 
 		// Panel
 		int panelWidth = 220;
@@ -254,14 +254,14 @@ public class GUI {
 		mods = new JLabel();
 		mods.setPreferredSize(new Dimension(panelWidth, 10));
 		mods.setFont(new Font("Arial", Font.PLAIN, 12));
-		/*
+		
 		forge = new JLabel();
 		forge.setPreferredSize(new Dimension(panelWidth, 10));
 		forge.setFont(new Font("Arial", Font.PLAIN, 12));
-		*/
+		
 		panelSec.add(version);
 		panelSec.add(mods);
-		//panelSec.add(forge);
+		panelSec.add(forge);
 
 		// Perfil
 		JPanel panelProf = new JPanel();
@@ -472,7 +472,7 @@ public class GUI {
 		tabs.addTab(Lang.getText("news"), news);
 		tabs.addTab(Lang.getText("console"), console);
 		tabs.addTab(Lang.getText("profileeditor"), profEditor);
-		//tabs.addTab(Lang.getText("launcher"), lch);
+		tabs.addTab(Lang.getText("launcher"), lch);
 		tabs.addTab(Lang.getText("advanced"), adv);
 
 		frame.getContentPane().setLayout(new BorderLayout());
@@ -480,8 +480,8 @@ public class GUI {
 		frame.getContentPane().add(tabs, BorderLayout.CENTER);
 
 		w.setPage(Launcher.NEWS_URL);
-		//w2.setPage(Launcher.LAUNCHER_NEWS_URL);
-		//adv.add(lch);
+		w2.setPage(Launcher.LAUNCHER_NEWS_URL);
+		adv.add(lch);
 		setLogin(Auth.login);
 		verifyLoginBT();
 	}
@@ -576,7 +576,7 @@ public class GUI {
 	}
 
 	private static void initWindow() {
-		//SubstanceLookAndFeel.setSkin("org.jvnet.substance.skin.RavenGraphiteSkin"); TODO
+		SubstanceLookAndFeel.setSkin("org.jvnet.substance.skin.RavenGraphiteSkin"); TODO
 		try {
 			UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
 		} catch (ClassNotFoundException | InstantiationException | IllegalAccessException | UnsupportedLookAndFeelException e1) {
